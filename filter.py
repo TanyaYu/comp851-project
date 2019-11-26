@@ -23,7 +23,7 @@ def filter(data):
             # deposited into a text file
             write_into_file(lead)
 
-
+# BRIDGET!!! in each function we need to send to a queue/channel
 def write_into_file(item):
     f = open("leads.txt", "a")
     f.write(str(item))
@@ -35,6 +35,3 @@ def put_in_leads(item):
 
 def put_in_high_priority(item):
     pass
-
-data = db.get_leads()
-filter(data)
