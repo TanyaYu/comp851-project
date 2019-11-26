@@ -13,10 +13,10 @@ def filter(leads):
     for lead in leads:
         if lead.country == 'United States':
             # put into a PostgreSQL table leads
-            pass
+            put_in_leads(lead)
         elif lead.cc:
             # database table named high_priority
-            pass
+            put_in_high_priority(lead)
         else:
             # deposited into a text file
             write_into_file(lead)
@@ -27,6 +27,12 @@ def write_into_file(item):
     f.write(str(item))
     f.write('\n')
     f.close()
+
+def put_in_leads(item):
+    pass
+
+def put_in_high_priority(item):
+    pass
 
 leads = db.get_leads()
 print(*leads)
