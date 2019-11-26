@@ -7,14 +7,16 @@
 
 from lead import Lead
 import db
+import json
 
 
-def filter(leads):
+def filter(data):
+    leads = json.loads(data)
     for lead in leads:
-        if lead.country == 'United States':
+        if lead["country"] == 'United States':
             # put into a PostgreSQL table leads
             put_in_leads(lead)
-        elif lead.cc:
+        elif lead["cc"]:
             # database table named high_priority
             put_in_high_priority(lead)
         else:
@@ -34,6 +36,5 @@ def put_in_leads(item):
 def put_in_high_priority(item):
     pass
 
-leads = db.get_leads()
-print(*leads)
-filter(leads)
+data = db.get_leads()
+filter(data)
