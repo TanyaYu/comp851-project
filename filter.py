@@ -9,6 +9,7 @@ from lead import Lead
 import db
 import json
 from sendtxt import send_item
+from sendbd import send_item
 
 
 def filter(data):
@@ -29,7 +30,7 @@ def write_into_file(item):
     send_item(item)
 
 def put_in_leads(item):
-    pass
+    send_item(item)
 
 def put_in_high_priority(item):
-    pass
+    send_item(item)
