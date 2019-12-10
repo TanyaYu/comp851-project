@@ -30,6 +30,10 @@ Use boto3, Amazon Web Services (AWS) Software Development Kit (SDK) for Python, 
 Here Using JSON we are cleaning the user data like id, first name, last name, email, gender, ip_address, cc, country, birthdate, salary, title.
 
 ## Filter Data
+Leads rely on a message routing approach to ship leads to different databases which support the sales teams: 
+  - If a lead is in the United States then they should be put into a PostgreSQL database table named leads. 
+  - If they are not and they have a known CC number, then they should go into a database table named high_priority.
+  - Otherwise, all leads should be deposited into a text file. 
 
 ## RabbitMQ
 Using the Python client, Pika, create three channels and two queues for the leads. There should be two channels dedicated to sending leads into the database queue and one channel dedicated to sending the the text file queue. When you recieve the leads, this is when you connect to either the database or the text file to dump the leads into its desired location.
