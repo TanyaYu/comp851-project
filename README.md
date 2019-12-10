@@ -27,6 +27,7 @@ The first is a data integration which provides lists of users as potential leads
 1. Use boto3, Amazon Web Services (AWS) Software Development Kit (SDK) for Python, to download the leads from the S3 bucket.
 
 ## Parse leads using JSON
+1. Here Using JSON we are cleaning the user data like id, first name, last name, email, gender, ip_address, cc, country, birthdate, salary, title.
 
 ## Filter Data
 
