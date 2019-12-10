@@ -24,10 +24,10 @@ The first is a data integration which provides lists of users as potential leads
  5. Setting up the PostgreSQL database for lead deposits
 
 ## List of Leads are deposited on S3
-1. Use boto3, Amazon Web Services (AWS) Software Development Kit (SDK) for Python, to download the leads from the S3 bucket.
+Use boto3, Amazon Web Services (AWS) Software Development Kit (SDK) for Python, to download the leads from the S3 bucket.
 
 ## Parse leads using JSON
-1. Here Using JSON we are cleaning the user data like id, first name, last name, email, gender, ip_address, cc, country, birthdate, salary, title.
+Here Using JSON we are cleaning the user data like id, first name, last name, email, gender, ip_address, cc, country, birthdate, salary, title.
 
 ## Filter Data
 
@@ -37,4 +37,8 @@ Using the Python client, Pika, create three channels and two queues for the lead
 ## PostgreSQL database
 
 ## Deploying Locally
+1. Open your terminal
+2. Start the RabbitMQ server
+3. Open a new terminal
+4. Run the run.py file
 
