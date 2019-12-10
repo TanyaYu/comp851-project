@@ -1,5 +1,5 @@
 import pika
-import json
+from parser import binary_to_json
 
 
 connection = pika.BlockingConnection(pika.ConnectionParameters(host='localhost'))
@@ -11,14 +11,16 @@ channel.queue_declare(queue='leadsdb_high_priority')
 
 def callback_leads(ch, method, properties, body):
     print(" [x] Received leads %r" % body)
-    string = body.decode()
-    item = json.dumps(str(string))
+    item = binary_to_json(body)
+    print(item["first_name"])
 
 
 def callback_high_priority(ch, method, properties, body):
     print(" [x] Received high priority %r" % body)
-    string = body.decode()
-    item = json.dumps(str(string))
+    item = binary_to_json(body)
+    print(item["first_name"])
+
+
 
 
 

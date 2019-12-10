@@ -15,6 +15,7 @@ from senddb import send_to_db_high_priority
 def filter(data):
     leads = json.loads(data)
     for lead in leads:
+        lead["comments"] = "" # wipe comments
         if lead["country"] == 'United States':
             # put into a PostgreSQL table leads
             put_in_leads(lead)
