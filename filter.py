@@ -7,8 +7,9 @@
 
 from lead import Lead
 import json
-from sendtxt import send_item
-from sendbd import send_item
+from sendtxt import send_to_txt
+from senddb import send_to_db
+from senddb import send_to_db_high_priority
 
 
 def filter(data):
@@ -26,10 +27,10 @@ def filter(data):
 
 #Calling RabbitMQ to send each lead as an item
 def write_into_file(item):
-    send_item(item)
+    send_to_txt(item)
 
 def put_in_leads(item):
-    send_item(item)
+    send_to_db(item)
 
 def put_in_high_priority(item):
-    send_item(item)
+    send_to_db_high_priority(item)
