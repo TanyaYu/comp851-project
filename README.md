@@ -24,4 +24,7 @@ The first is a data integration which provides lists of users as potential leads
  5. Setting up the PostgreSQL database for lead deposits
 
 ## List of Leads are deposited on S3
-1. Use boto3 to 
+1. Use boto3, Amazon Web Services (AWS) Software Development Kit (SDK) for Python, to download the leads from the S3 bucket.
+
+## Parse leads using JSON
+
