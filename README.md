@@ -28,3 +28,12 @@ The first is a data integration which provides lists of users as potential leads
 
 ## Parse leads using JSON
 
+## Filter Data
+
+## RabbitMQ
+Using the Python client, Pika, create three channels and two queues for the leads. There should be two channels dedicated to sending leads into the database queue and one channel dedicated to sending the the text file queue. When you recieve the leads, this is when you connect to either the database or the text file to dump the leads into its desired location.
+
+## PostgreSQL database
+
+## Deploying Locally
+
