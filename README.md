@@ -44,5 +44,8 @@ Using the Python client, Pika, create three channels and two queues for the lead
 1. Open your terminal
 2. Start the RabbitMQ server
 3. Open a new terminal
-4. Run the run.py file
+4. Run receivedb.py
+5. Open a new terminal
+6. Run receivetxt.py
+7. Run the run.py file
 
