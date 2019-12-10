@@ -7,6 +7,8 @@
 
 from lead import Lead
 import json
+from sendtxt import send_item
+from sendbd import send_item
 
 
 def filter(data):
@@ -22,15 +24,12 @@ def filter(data):
             # deposited into a text file
             write_into_file(lead)
 
-# BRIDGET!!! in each function we need to send to a queue/channel
+#Calling RabbitMQ to send each lead as an item
 def write_into_file(item):
-    f = open("leads.txt", "a")
-    f.write(str(item))
-    f.write('\n')
-    f.close()
+    send_item(item)
 
 def put_in_leads(item):
-    pass
+    send_item(item)
 
 def put_in_high_priority(item):
-    pass
+    send_item(item)
