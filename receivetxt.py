@@ -1,5 +1,5 @@
 import pika
-
+import json
 
 connection = pika.BlockingConnection(pika.ConnectionParameters(host='localhost'))
 channel = connection.channel()
@@ -9,8 +9,10 @@ channel.queue_declare(queue='leads')
 def callback(ch, method, properties, body):
     print(" [x] Received %r" % body)
 
+    string = body.decode()
+    item = json.dumps(str(string))
+
     #Write the leads into the txt file
-    item = body
     f = open("leads.txt", "a")
     f.write(str(item))
     f.write('\n')
