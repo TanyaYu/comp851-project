@@ -1,2 +1,4 @@
 __pycache__
 leads.txt
+*.json
+*.csv

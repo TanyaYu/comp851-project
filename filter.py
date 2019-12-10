@@ -6,7 +6,6 @@
 # otherwise all leads should be deposited into a text file.
 
 from lead import Lead
-import db
 import json
 
 

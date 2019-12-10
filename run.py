@@ -1,6 +1,6 @@
-import db
-from filter import filter 
+import data_source
+from filter import filter
 
 
-data = db.get_leads()
+data = data_source.download_leads()
 filter(data)
