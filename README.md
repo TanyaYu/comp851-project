@@ -1,4 +1,9 @@
 ## comp851-project
+### Team Members:
+- Tanya Iuferova
+- Siri Chandana Komatireddy 
+- Snehal Jadhav 
+- Bridget Franciscovich 
 ## Project: Prof Tim Widget Company (PTWC) Data Stream Project 1
 ### Assignment Description:
 #### The first is a data integration which provides lists of users as potential leads for purchasing of Widgets.  Every day a new list of leads are deposited on S3 by a marketing partner, and the leads must be processed in order to determine how they should be contacted.  The existing lead integration hub is a RabbitMQ cluster, and the Office of Architecture has decreed that this integration must maintain that approach.  In addition, existing marketing integrations rely on a message routing approach to ship leads to different databases which support the sales teams.  If a lead is in the United States then they should be put into a PostgreSQL database table named leads.  If they are not and they have a known CC number, then they should go into a database table named high_priority, and otherwise all leads should be deposited into a text file.  This plan must be expressed using the EIP symbols for draw.io and deployed to AWS cloud.
